@@ -10,4 +10,4 @@ zostać ona wykonana, potwierdzenie wykonania pracy,
 odliczanie czasu do odlotu maszyny. 
 Role pracowników dostępnych w systemie to kierownik naczelny, 
 kierownik stanowiska, serwis bagażowy, serwis cateringowy, serwis sprzątający, 
-serwis boardingowy, serwis wypychający, serwis "follow me".
+serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
