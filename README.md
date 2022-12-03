@@ -16,7 +16,7 @@ serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
    Wzorce behawioralne: Obserwator, Polecenie, Iterator, Mediator
    
    Wzorce kreacyjne: Builder, Metoda wytwórcza
-3) Pełnomocnik - zapobieganie dostępu niepożądanemu obiektowi, np. zapobieganie zatwierdzaniu czynności danego serwisu przez inny serwis
+3) Pełnomocnik - stworzenie nowej klasy pośredniczącej, która po otrzymaniu żądania od klienta przeprowadzi kontrolę dostępu i następnie utworzy obiekt usługi i przekaże mu żądanie
 
    Dekorator - utworzenie dekoratora, który opakowujac obiekty ułatwi przesyłanie informacji na lotnisku wieloma 
           kanałami jednocześnie np. w przypadku opóźnienia lotu
