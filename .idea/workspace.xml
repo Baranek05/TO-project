@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../JiPP_labki/projekt_koncowy/.idea/projekt_koncowy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Języki Symboliczne/.idea/Języki Symboliczne.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Programowanie w Javie.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestDrivenDevelopment/TestDrivenDevelopment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baranjakub_calculator/baranjakubCalculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baranjakub_calculator/jbaran.calculator/kalkulator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../calculator/calculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatClient/chat/chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatClient/chatClient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatServer/ServerChat/ServerChat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatServer/chatServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab1_to/lab1_to.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2_to/lab2_to.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab5/lab5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../projektTO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../projekt_java/projekt_java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../threads/threads.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zadanie1_to/zadanie1_to.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TO_lab6/TO_lab6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestDrivenDevelopment/TestDrivenDevelopment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise4/exercise4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exercise4/out/production/exercise4/exercise1/exercise4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../fuzzython/.idea/fuzzython.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab4_TO/lab4_TO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab_2.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JeFkVfqbvwQ1cXulDdzw3pYY0U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src\view" />
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src\view" />
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt" />
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
+      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\.idea" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="" />
+      <created>1672430787966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672430787966</updated>
+      <workItem from="1672430789354" duration="10040000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
