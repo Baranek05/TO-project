@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../JiPP_labki/projekt_koncowy/.idea/projekt_koncowy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Języki Symboliczne/.idea/Języki Symboliczne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programowanie w Javie.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestDrivenDevelopment/TestDrivenDevelopment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baranjakub_calculator/baranjakubCalculator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baranjakub_calculator/jbaran.calculator/kalkulator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/calculator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatClient/chat/chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatClient/chatClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatServer/ServerChat/ServerChat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatServer/chatServer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1_to/lab1_to.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2_to/lab2_to.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/lab5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../projektTO.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../projekt_java/projekt_java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../threads/threads.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../zadanie1_to/zadanie1_to.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TO_lab6/TO_lab6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TestDrivenDevelopment/TestDrivenDevelopment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../exercise4/exercise4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../exercise4/out/production/exercise4/exercise1/exercise4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../fuzzython/.idea/fuzzython.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab4_TO/lab4_TO.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab_2.iml" afterDir="false" />
+    <list default="true" id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="update .gitignore">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Flight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/MainManger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Pilot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PositionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Work.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/WorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/EmployeeDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/FlightDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/WorkDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +28,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -60,11 +54,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+      <recent name="storage" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\Downloads\TO-project" />
       <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src\view" />
       <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
     </key>
@@ -74,6 +76,54 @@
       <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
       <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\.idea" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.PositionManager">
+    <configuration name="PositionManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.PositionManager" />
+      <module name="TOprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boardingServiceForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.boardingServiceForm" />
+      <module name="TOprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="standManagerForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.standManagerForm" />
+      <module name="TOprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PositionManager" />
+        <item itemvalue="Application.boardingServiceForm" />
+        <item itemvalue="Application.standManagerForm" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
