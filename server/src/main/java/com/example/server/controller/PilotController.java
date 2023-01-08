@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("pilot")
-public class PilotController {
+public class PilotController{
 
 
     @Autowired

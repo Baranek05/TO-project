@@ -5,31 +5,22 @@ import com.example.server.model.MessageToGeneralManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 @Service
-public class GeneralManagerService {
+public class GeneralManagerService extends RenameMe<MessageToGeneralManagerService> {
 
     private final AirportService airportService;
 
-    private final Queue<MessageToGeneralManagerService> messageToGeneralManagerServiceQueue;
+
 
     @Autowired
     public GeneralManagerService(AirportService airportService) {
         this.airportService = airportService;
-        messageToGeneralManagerServiceQueue = new LinkedList<>();
 
-        this.airportService.onSendMessageToGeneralManagerService(messageToGeneralManagerServiceQueue::add);
+        this.airportService.onSendMessageToGeneralManagerService(messageQueue::add);
     }
     public void sendMessage(MessageFromGeneralManagerService messageFromGeneralManagerService) {
         airportService.sendMessageFromGeneralManager(messageFromGeneralManagerService);
     }
-    public MessageToGeneralManagerService getMessage() {
-        if(messageToGeneralManagerServiceQueue.isEmpty()) {
-            return null;
-        }
 
-        return messageToGeneralManagerServiceQueue.poll();
-    }
 }

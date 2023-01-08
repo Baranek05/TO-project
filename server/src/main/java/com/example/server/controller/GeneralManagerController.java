@@ -8,18 +8,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("generalmanager")
-public class GeneralManagerController {
+public class GeneralManagerController extends MessageController<MessageToGeneralManagerService, GeneralManagerService>{
 
-    @Autowired
-    private GeneralManagerService generalManagerService;
 
-    @GetMapping("/getmessage")
-    public MessageToGeneralManagerService getMessage() {
-        return generalManagerService.getMessage();
+    protected GeneralManagerController(GeneralManagerService generalManagerService) {
+        super(generalManagerService);
     }
 
     @PostMapping("/sendmessage")
-    public void postLanded(@RequestBody MessageFromGeneralManagerService messageFromGeneralManagerService) {
-        generalManagerService.sendMessage(messageFromGeneralManagerService);
+    public void postMessage(@RequestBody MessageFromGeneralManagerService messageFromGeneralManagerService) {
+        service.sendMessage(messageFromGeneralManagerService);
     }
 }
