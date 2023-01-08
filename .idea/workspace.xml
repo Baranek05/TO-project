@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="update .gitignore">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/MainManger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Pilot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/PositionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Work.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/FlightService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/WorkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/EmployeeDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/FlightDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/WorkDataBase.java" afterDir="false" />
+    <list default="true" id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/TOprojekt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/Flight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/MainManger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/Pilot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/PositionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/model/Work.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/service/WorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/storage/EmployeeDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/storage/FlightDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/storage/WorkDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/boardingServiceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/boardingServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/cateringServiceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/cateringServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/cleaningServiceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/cleaningServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/followMeServiceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/followMeServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/generalManagerForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/generalManagerForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/luggageServiceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/luggageServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/pilotForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/pilotForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/pushbackServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/pushbackServiceFormForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/standManagerForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/standManagerForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/tankingServiceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/view/tankingServiceFormForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/ServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/BoardingServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/CateringServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/CleaningServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/GeneralManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/LuggageServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/PilotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/PushbackServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/StandManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/TankingServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageToGeneralManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/AirportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CateringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CleaningService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/GeneralManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/LuggageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/PilotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/PushbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/StandManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/TankingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/AirportState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/GeneralManagerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/LandedState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/ReadyState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/example/server/ServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOprojekt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Flight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MainManger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Pilot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PositionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Work.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/FlightService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/WorkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/EmployeeDataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/FlightDataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/WorkDataBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/boardingServiceForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/boardingServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/cateringServiceForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/cateringServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/cleaningServiceForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/cleaningServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/followMeServiceForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/followMeServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/generalManagerForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/generalManagerForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/luggageServiceForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/luggageServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/pilotForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/pilotForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/pushbackServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/pushbackServiceFormForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/standManagerForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/standManagerForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/tankingServiceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/tankingServiceFormForm.form" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,112 +127,64 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JeFkVfqbvwQ1cXulDdzw3pYY0U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2K0DdgAQDI6W5oeNL4sXBlSiCNQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/X1 Carbon/Desktop/TO/project/server/src/main/java/com/example/server/service",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model" />
-      <recent name="storage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\Downloads\TO-project" />
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src\view" />
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src\view" />
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt" />
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\src" />
-      <recent name="C:\Users\jbara\Documents\Programowanie w Javie\TOprojekt\.idea" />
+      <recent name="C:\Users\X1 Carbon\Desktop\TO\project\server\src\main\java\com\example\server\service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PositionManager">
-    <configuration name="PositionManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.PositionManager" />
-      <module name="TOprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager">
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server.ServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="boardingServiceForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.boardingServiceForm" />
-      <module name="TOprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="standManagerForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.standManagerForm" />
-      <module name="TOprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PositionManager" />
-        <item itemvalue="Application.boardingServiceForm" />
-        <item itemvalue="Application.standManagerForm" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4c724fbf-f5ff-4c46-845d-af9310ac1ebb" name="Changes" comment="" />
-      <created>1672430787966</created>
+      <changelist id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="" />
+      <created>1673102701131</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672430787966</updated>
-      <workItem from="1672430789354" duration="10040000" />
+      <updated>1673102701131</updated>
+      <workItem from="1673102703943" duration="23212000" />
     </task>
     <servers />
   </component>
@@ -150,5 +201,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
