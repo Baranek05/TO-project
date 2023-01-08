@@ -1,6 +1,8 @@
 package com.example.server.service;
 
+import com.example.server.model.MessageFromGeneralManagerService;
 import com.example.server.model.MessageToGeneralManagerService;
+import com.example.server.model.MessageToStandManagerService;
 import com.example.server.service.state.AirportState;
 import com.example.server.service.state.GeneralManagerState;
 import com.example.server.service.state.LandedState;
@@ -15,6 +17,7 @@ public class AirportService {
     public AirportState state;
 
     private Consumer<MessageToGeneralManagerService> sendMessageToGeneralManagerService;
+    private Consumer<MessageToStandManagerService> sendMessageToStandManagerService;
 
     public AirportService () {
         this.state = new ReadyState();
@@ -28,6 +31,9 @@ public class AirportService {
     public void onSendMessageToGeneralManagerService(Consumer<MessageToGeneralManagerService> action) {
         sendMessageToGeneralManagerService = action;
     }
+    public void onSendMessageToStandManagerService(Consumer<MessageToStandManagerService> action) {
+        sendMessageToStandManagerService = action;
+    }
     public void pilotLanded() {
         if (this.state instanceof ReadyState) {
             changeState(new LandedState());
@@ -36,11 +42,15 @@ public class AirportService {
             sendMessageToGeneralManagerService.accept(new MessageToGeneralManagerService());
         }
     }
-    public void sendMessageToStandManager() {
+    public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
         if (this.state instanceof LandedState) {
             changeState(new GeneralManagerState());
             state.setContext(this);
-
+            MessageToStandManagerService messageToStandManagerService = new MessageToStandManagerService(
+                    messageFromGeneralManagerService.message(),
+                    messageFromGeneralManagerService.minutes()
+            );
+            sendMessageToStandManagerService.accept(messageToStandManagerService);
         }
     }
 

@@ -3,7 +3,7 @@ public class MessageToGeneralManagerService {
     private final String message;
 
     public MessageToGeneralManagerService() {
-        message = "hell:)";
+        message = "landed";
     }
 
     public String getMessage() {
