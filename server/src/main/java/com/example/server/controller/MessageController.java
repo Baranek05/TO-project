@@ -17,4 +17,6 @@ public abstract class MessageController<TMessage, TService extends RenameMe<TMes
     public TMessage getMessage() {
         return service.getMessage();
     }
+
+
 }

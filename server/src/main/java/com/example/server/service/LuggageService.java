@@ -16,4 +16,12 @@ public class LuggageService extends RenameMe<MessageToService>{
 
         this.airportService.onSendMessageToLuggageService(messageQueue::add);
     }
+
+    public void finished() {
+        airportService.luggageFinished();
+    }
+
+    public void finishedDeparture() {
+        airportService.luggageDepartureFinished();
+    }
 }
