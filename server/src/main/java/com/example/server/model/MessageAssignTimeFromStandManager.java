@@ -1,4 +1,4 @@
 package com.example.server.model;
 
-public record MessageAssignTimeFromStandManager(String message, int minutes, ServiceType service) {
+public record MessageAssignTimeFromStandManager(String message, int minutes, ServiceType service, int flightNumber) {
 }

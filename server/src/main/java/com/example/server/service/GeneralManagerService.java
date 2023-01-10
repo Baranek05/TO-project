@@ -11,14 +11,13 @@ public class GeneralManagerService extends RenameMe<MessageToGeneralManagerServi
 
     private final AirportService airportService;
 
-
-
     @Autowired
     public GeneralManagerService(AirportService airportService) {
         this.airportService = airportService;
 
         this.airportService.onSendMessageToGeneralManagerService(messageQueue::add);
     }
+
     public void sendMessage(MessageFromGeneralManagerService messageFromGeneralManagerService) {
         airportService.sendMessageFromGeneralManager(messageFromGeneralManagerService);
     }

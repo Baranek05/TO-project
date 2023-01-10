@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class WorkOrder {
-    private UUID uuid;
+    private final UUID uuid;
     private int estimatedTimeInMinutes;
     private int flightNumber;
     private Employee assignee;
@@ -92,9 +92,14 @@ public class WorkOrder {
             return this;
         }
 
+        public Builder flightNumber(int flightNumber) {
+            this.flightNumber = flightNumber;
+            return this;
+        }
+
         public WorkOrder build() {
-            if(estimatedTimeInMinutes == 0){
-                throw new IllegalStateException("Estimated time cannot be 0.");
+            if(flightNumber == 0){
+                throw new IllegalStateException("Flight number required.");
             }
 
             WorkOrder work = id != null ? new WorkOrder(id) : new WorkOrder(UUID.randomUUID());

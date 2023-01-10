@@ -1,7 +1,7 @@
 package com.example.server.service;
 
 import com.example.server.model.WorkOrder;
-import com.example.storage.WorkDataBase;
+import com.example.server.storage.WorkDataBase;
 import org.springframework.stereotype.Service;
 
 @Service

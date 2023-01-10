@@ -2,11 +2,12 @@ package com.example.server.service;
 
 import com.example.server.model.Employee;
 import com.example.server.model.ServiceType;
-import com.example.storage.EmployeeDataBase;
+import com.example.server.storage.EmployeeDataBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class EmployeeService {
@@ -26,4 +27,13 @@ public class EmployeeService {
         return employeeDataBase.getAvailableOnPosition(serviceType);
     }
 
+    public List<Employee> getAllEmployees() {
+        return employeeDataBase.getAll();
+    }
+
+    public void assign(Employee assignee, UUID uuid) {
+        assignee.setWorkOrderId(uuid);
+        assignee.setAssigned(true);
+        employeeDataBase.update(assignee);
+    }
 }

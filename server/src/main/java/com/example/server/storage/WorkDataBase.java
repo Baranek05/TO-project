@@ -1,4 +1,4 @@
-package com.example.storage;
+package com.example.server.storage;
 
 import com.example.server.model.WorkOrder;
 import org.springframework.stereotype.Component;

@@ -16,8 +16,8 @@ public class BoardingService extends RenameMe<MessageToService> {
         this.airportService.onSendMessageToBoardingService(messageQueue::add);
     }
 
-    public void finished() {
-        airportService.boardingFinished();
+    public void finished(int flightNumber) {
+        airportService.boardingFinished(flightNumber);
     }
     public void finishedDeparture() {
         airportService.boardingDepartureFinished();

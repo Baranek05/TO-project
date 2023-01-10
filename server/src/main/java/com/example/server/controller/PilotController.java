@@ -16,9 +16,9 @@ public class PilotController extends MessageController<MessageToService, PilotSe
         super(pilotService);
     }
 
-    @PostMapping("/landed")
-        public void postLanded() {
-            service.landed();
+    @PostMapping("/landed/{flightNumber}")
+        public void postLanded(@PathVariable int flightNumber) {
+            service.landed(flightNumber);
         }
 
     @PostMapping("/sendfinished")

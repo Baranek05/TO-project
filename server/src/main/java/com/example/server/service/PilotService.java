@@ -19,8 +19,8 @@ public class PilotService extends RenameMe<MessageToService>{
         this.airportService.onSendMessageToPilotService(messageQueue::add);
     }
 
-    public void landed() {
-        airportService.pilotLanded();
+    public void landed(int flightNumber) {
+        airportService.pilotLanded(flightNumber);
     }
 
     public void finished() {
