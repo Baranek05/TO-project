@@ -1,21 +1,29 @@
 package com.example.server.controller;
 
+import com.example.server.model.MessageToService;
 import com.example.server.service.PilotService;
+import com.example.server.service.PushbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController()
 @RequestMapping("pilot")
-public class PilotController{
+public class PilotController extends MessageController<MessageToService, PilotService> {
 
 
-    @Autowired
-    private PilotService pilotService;
+    protected PilotController(PilotService pilotService) {
+        super(pilotService);
+    }
 
-        @PostMapping("/landed")
+    @PostMapping("/landed")
         public void postLanded() {
-            pilotService.landed();
+            service.landed();
         }
+
+    @PostMapping("/sendfinished")
+    public void postMessage() {
+        service.finished();
+    }
 
 }

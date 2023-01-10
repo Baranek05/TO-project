@@ -14,4 +14,8 @@ public class CateringService extends RenameMe<MessageToService> {
 
         this.airportService.onSendMessageToCateringService(messageQueue::add);
     }
+
+    public void finished() {
+        airportService.cateringFinished();
+    }
 }

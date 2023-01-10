@@ -15,4 +15,13 @@ public class BoardingService extends RenameMe<MessageToService> {
 
         this.airportService.onSendMessageToBoardingService(messageQueue::add);
     }
+
+    public void finished() {
+        airportService.boardingFinished();
+    }
+    public void finishedDeparture() {
+        airportService.boardingDepartureFinished();
+    }
+
+
 }

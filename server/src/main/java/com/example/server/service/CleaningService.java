@@ -14,4 +14,8 @@ public class CleaningService extends RenameMe<MessageToService> {
 
         this.airportService.onSendMessageToCleaningService(messageQueue::add);
     }
+    public void finished() {
+        airportService.cleaningFinished();
+    }
+
 }

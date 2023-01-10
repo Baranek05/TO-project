@@ -14,4 +14,8 @@ public class PushbackService extends RenameMe<MessageToService> {
 
         this.airportService.onSendMessageToPushbackService(messageQueue::add);
     }
+
+    public void finished() {
+        airportService.pushbackFinished();
+    }
 }

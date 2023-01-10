@@ -1,14 +1,14 @@
 package com.example.server.service;
 
 
+import com.example.server.model.MessageToService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-interface MessageToPilotService {}
 
 @Service
-public class PilotService extends RenameMe<MessageToPilotService>{
+public class PilotService extends RenameMe<MessageToService>{
 
     private final AirportService airportService;
 
@@ -21,6 +21,10 @@ public class PilotService extends RenameMe<MessageToPilotService>{
 
     public void landed() {
         airportService.pilotLanded();
+    }
+
+    public void finished() {
+        airportService.pilotFinished();
     }
 
 }

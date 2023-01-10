@@ -13,13 +13,7 @@ public class AirportService {
 
     private Consumer<MessageToGeneralManagerService> sendMessageToGeneralManagerService;
     private Consumer<MessageToStandManagerService> sendMessageToStandManagerService;
-    private Consumer<MessageToService> sendMessageToLuggageService;
-    private Consumer<MessageToService> sendMessageToBoardingService;
-    private Consumer<MessageToService> sendMessageToCleaningService;
-    private Consumer<MessageToService> sendMessageToCateringService;
-    private Consumer<MessageToService> sendMessageToPushbackService;
-    private Consumer<MessageToService> sendMessageToTankingService;
-
+    private Consumer<MessageToService> sendMessageToPilotService, sendMessageToLuggageService, sendMessageToBoardingService, sendMessageToCleaningService, sendMessageToCateringService, sendMessageToPushbackService,sendMessageToTankingService;
 
     public AirportService () {
         this.state = new ReadyState();
@@ -28,7 +22,8 @@ public class AirportService {
     public void changeState(AirportState state) {
         this.state = state;
     }
-    public void onSendMessageToPilotService(Consumer<MessageToPilotService> action) {
+    public void onSendMessageToPilotService(Consumer<MessageToService> action) {
+        sendMessageToPilotService = action;
     }
     public void onSendMessageToGeneralManagerService(Consumer<MessageToGeneralManagerService> action) {
         sendMessageToGeneralManagerService = action;
@@ -74,7 +69,7 @@ public class AirportService {
         }
     }
 
-    public void sendMessageFromStandManager(MessageFromStandManagerService messageFromStandManagerService) {
+    public void sendMessageFromStandManager(MessageAssignTimeFromStandManager messageAssignTimeFromStandManagerService) {
         if (this.state instanceof GeneralManagerState) {
             changeState(new StandManagerState());
             state.setContext(this);
@@ -82,11 +77,10 @@ public class AirportService {
         } else if (!(this.state instanceof StandManagerState)) {
             return;
         }
-        MessageToService messageToService = new MessageToService(
-                messageFromStandManagerService.message(),
-                messageFromStandManagerService.minutes()
-        );
-        switch (messageFromStandManagerService.service()) {
+        var messageToService = new MessageToService(new MessageAssignTimeToService(messageAssignTimeFromStandManagerService.message(),
+                messageAssignTimeFromStandManagerService.minutes()), null);
+
+        switch (messageAssignTimeFromStandManagerService.service()) {
             case LUGGAGE_SERVICE -> sendMessageToLuggageService.accept(messageToService);
             case BOARDING_SERVICE -> sendMessageToBoardingService.accept(messageToService);
             case CLEANING_SERVICE -> sendMessageToCleaningService.accept(messageToService);
@@ -95,6 +89,95 @@ public class AirportService {
             case PUSHBACK_SERVICE -> sendMessageToPushbackService.accept(messageToService);
         }
     }
+
+    public void standManagerFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof StandManagerState) {
+            changeState(new LuggageArrivalState());
+            state.setContext(this);
+            sendMessageToLuggageService.accept(messageStartToService);
+            sendMessageToBoardingService.accept(messageStartToService);
+        }
+    }
+
+    public void luggageFinished() {
+        if (this.state instanceof LuggageArrivalState) {
+            changeState(new BoardingArrivalState());
+            state.setContext(this);
+        }
+    }
+
+    public void boardingFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof BoardingArrivalState) {
+            changeState(new CleaningState());
+            state.setContext(this);
+            sendMessageToCleaningService.accept(messageStartToService);
+        }
+    }
+
+    public void cleaningFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof CleaningState) {
+            changeState(new TankingState());
+            state.setContext(this);
+            sendMessageToTankingService.accept(messageStartToService);
+        }
+    }
+
+    public void tankingFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof TankingState) {
+            changeState(new CateringState());
+            state.setContext(this);
+            sendMessageToCateringService.accept(messageStartToService);
+        }
+    }
+
+    public void cateringFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof CateringState) {
+            changeState(new LuggageDepartureState());
+            state.setContext(this);
+            sendMessageToLuggageService.accept(messageStartToService);
+            sendMessageToBoardingService.accept(messageStartToService);
+        }
+    }
+
+    public void luggageDepartureFinished() {
+        if (this.state instanceof LuggageDepartureState) {
+            changeState(new BoardingDepartureState());
+            state.setContext(this);
+        }
+    }
+
+    public void boardingDepartureFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof BoardingDepartureState) {
+            changeState(new PilotToPushbackState());
+            state.setContext(this);
+           sendMessageToPilotService.accept(messageStartToService);
+        }
+    }
+
+    public void pilotFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof PilotToPushbackState) {
+            changeState(new PushbackState());
+            state.setContext(this);
+            sendMessageToPushbackService.accept(messageStartToService);
+        }
+    }
+
+    public void pushbackFinished() {
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
+        if (this.state instanceof PushbackState) {
+            changeState(new PushbackToPilotState());
+            state.setContext(this);
+            sendMessageToPilotService.accept(messageStartToService);
+        }
+    }
+
 
 
 }

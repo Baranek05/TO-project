@@ -15,4 +15,8 @@ public class TankingService extends RenameMe<MessageToService> {
 
         this.airportService.onSendMessageToTankingService(messageQueue::add);
     }
+    public void finished() {
+        airportService.tankingFinished();
+    }
+
 }

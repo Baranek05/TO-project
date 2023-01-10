@@ -1,5 +1,6 @@
 package com.example.server.controller;
 
+import com.example.server.model.MessageAssignTimeFromStandManager;
 import com.example.server.model.MessageFromStandManagerService;
 import com.example.server.model.MessageToStandManagerService;
 import com.example.server.service.StandManagerService;
@@ -14,7 +15,12 @@ public class StandManagerController extends MessageController<MessageToStandMana
     }
 
     @PostMapping("/sendmessage")
-    public void postMessage(@RequestBody MessageFromStandManagerService messageFromStandManagerService) {
-        service.sendMessage(messageFromStandManagerService);
+    public void postMessage(@RequestBody MessageAssignTimeFromStandManager messageAssignTimeFromStandManager) {
+        service.sendMessage(messageAssignTimeFromStandManager);
+    }
+
+    @PostMapping("/sendfinished")
+    public void postMessage() {
+        service.finished();
     }
 }

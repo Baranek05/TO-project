@@ -5,6 +5,7 @@ import com.example.server.service.CateringService;
 import com.example.server.service.PilotService;
 import com.example.server.service.PushbackService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,5 +16,10 @@ public class PushbackServiceController extends MessageController<MessageToServic
 
     protected PushbackServiceController(PushbackService pushbackService) {
         super(pushbackService);
+    }
+
+    @PostMapping("/sendfinished")
+    public void postMessage() {
+        service.finished();
     }
 }
