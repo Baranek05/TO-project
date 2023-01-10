@@ -6,24 +6,25 @@ import org.springframework.stereotype.Service;
 
 
 import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 
 @Service
 public class AirportService {
-    public AirportState state;
+    public Map<Integer, AirportState> stateByFlight;
 
     private Consumer<MessageToGeneralManagerService> sendMessageToGeneralManagerService;
     private Consumer<MessageToStandManagerService> sendMessageToStandManagerService;
     private Consumer<MessageToService> sendMessageToPilotService, sendMessageToLuggageService, sendMessageToBoardingService, sendMessageToCleaningService, sendMessageToCateringService, sendMessageToPushbackService,sendMessageToTankingService;
     
     public AirportService () {
-        this.state = new ReadyState();
-        state.setContext(this);
+        stateByFlight = new HashMap<>();
     }
 
-    public void changeState(AirportState state) {
-        this.state = state;
+    public void changeState(int flightNumber, AirportState state) {
+        this.stateByFlight.put(flightNumber, state);
     }
     public void onSendMessageToPilotService(Consumer<MessageToService> action) {
         sendMessageToPilotService = action;
@@ -53,32 +54,34 @@ public class AirportService {
         sendMessageToPushbackService = action;
     }
     public void pilotLanded(int flightNumber) {
-        if (this.state instanceof ReadyState) {
-            changeState(new LandedState());
-            state.setContext(this);
+        if(!this.stateByFlight.containsKey(flightNumber)) {
+            changeState(flightNumber, new LandedState());
+            stateByFlight.get(flightNumber).setContext(this);
 
             sendMessageToGeneralManagerService.accept(new MessageToGeneralManagerService(flightNumber));
         }
     }
     public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
-        if (this.state instanceof LandedState) {
-            changeState(new GeneralManagerState());
-            state.setContext(this);
+        int flightNumber = messageFromGeneralManagerService.flightNumber();
+        if (this.stateByFlight.get(flightNumber) instanceof LandedState) {
+            changeState(flightNumber, new GeneralManagerState());
+            stateByFlight.get(flightNumber).setContext(this);
             MessageToStandManagerService messageToStandManagerService = new MessageToStandManagerService(
                     messageFromGeneralManagerService.message(),
                     messageFromGeneralManagerService.minutes(),
-                    messageFromGeneralManagerService.flightNumber()
+                    flightNumber
             );
             sendMessageToStandManagerService.accept(messageToStandManagerService);
         }
     }
 
     public void sendMessageFromStandManager(MessageAssignTimeFromStandManager messageAssignTimeFromStandManagerService, StandManagerService standManagerService) {
-        if (this.state instanceof GeneralManagerState) {
-            changeState(new StandManagerState());
-            state.setContext(this);
+        int flightNumber = messageAssignTimeFromStandManagerService.flightNumber();
+        if (this.stateByFlight.get(flightNumber) instanceof GeneralManagerState) {
+             changeState(flightNumber, new StandManagerState());
+            stateByFlight.get(flightNumber).setContext(this);
 
-        } else if (!(this.state instanceof StandManagerState)) {
+        } else if (!(this.stateByFlight.get(flightNumber) instanceof StandManagerState)) {
             return;
         }
 
@@ -89,7 +92,7 @@ public class AirportService {
         }
 
         WorkOrder build = new WorkOrder.Builder()
-                .flightNumber(messageAssignTimeFromStandManagerService.flightNumber())
+                .flightNumber(flightNumber)
                 .assignee(availableEmployee.get())
                 .estimatedTimeInMinutes(messageAssignTimeFromStandManagerService.minutes())
                 .startDate(Instant.now())
@@ -116,88 +119,97 @@ public class AirportService {
 
     public void standManagerFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof StandManagerState) {
-            changeState(new LuggageArrivalState());
-            state.setContext(this);
+        var flightNumber = 0;
+        if (this.stateByFlight.get(flightNumber) instanceof StandManagerState) {
+             changeState(flightNumber, new LuggageArrivalState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToLuggageService.accept(messageStartToService);
             sendMessageToBoardingService.accept(messageStartToService);
         }
     }
 
     public void luggageFinished() {
-        if (this.state instanceof LuggageArrivalState) {
-            changeState(new BoardingArrivalState());
-            state.setContext(this);
+        var flightNumber = 0;
+        if (this.stateByFlight.get(flightNumber) instanceof LuggageArrivalState) {
+             changeState(flightNumber, new BoardingArrivalState());
+            stateByFlight.get(flightNumber).setContext(this);
         }
     }
 
     public void boardingFinished(int flightNumber) {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), flightNumber);
-        if (this.state instanceof BoardingArrivalState) {
-            changeState(new CleaningState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof BoardingArrivalState) {
+             changeState(flightNumber, new CleaningState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToCleaningService.accept(messageStartToService);
         }
     }
 
     public void cleaningFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof CleaningState) {
-            changeState(new TankingState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof CleaningState) {
+             changeState(flightNumber, new TankingState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToTankingService.accept(messageStartToService);
         }
     }
 
     public void tankingFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof TankingState) {
-            changeState(new CateringState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof TankingState) {
+             changeState(flightNumber, new CateringState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToCateringService.accept(messageStartToService);
         }
     }
 
     public void cateringFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof CateringState) {
-            changeState(new LuggageDepartureState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof CateringState) {
+             changeState(flightNumber, new LuggageDepartureState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToLuggageService.accept(messageStartToService);
             sendMessageToBoardingService.accept(messageStartToService);
         }
     }
 
     public void luggageDepartureFinished() {
-        if (this.state instanceof LuggageDepartureState) {
-            changeState(new BoardingDepartureState());
-            state.setContext(this);
+        var flightNumber = 0;
+        if (this.stateByFlight.get(flightNumber) instanceof LuggageDepartureState) {
+             changeState(flightNumber, new BoardingDepartureState());
+            stateByFlight.get(flightNumber).setContext(this);
         }
     }
 
     public void boardingDepartureFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof BoardingDepartureState) {
-            changeState(new PilotToPushbackState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof BoardingDepartureState) {
+             changeState(flightNumber, new PilotToPushbackState());
+            stateByFlight.get(flightNumber).setContext(this);
            sendMessageToPilotService.accept(messageStartToService);
         }
     }
 
     public void pilotFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof PilotToPushbackState) {
-            changeState(new PushbackState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof PilotToPushbackState) {
+             changeState(flightNumber, new PushbackState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToPushbackService.accept(messageStartToService);
         }
     }
 
     public void pushbackFinished() {
+        var flightNumber = 0;
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"), 0);
-        if (this.state instanceof PushbackState) {
-            changeState(new PushbackToPilotState());
-            state.setContext(this);
+        if (this.stateByFlight.get(flightNumber) instanceof PushbackState) {
+             changeState(flightNumber, new PushbackToPilotState());
+            stateByFlight.get(flightNumber).setContext(this);
             sendMessageToPilotService.accept(messageStartToService);
         }
     }
