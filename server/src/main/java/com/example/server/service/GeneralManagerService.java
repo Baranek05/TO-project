@@ -6,21 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-@Service
-public class GeneralManagerService extends RenameMe<MessageToGeneralManagerService> {
+public class GeneralManagerService extends MessageQueue<MessageToGeneralManagerService> {
 
-    private final AirportService airportService;
-
+    private FlightService flightService;
 
 
-    @Autowired
-    public GeneralManagerService(AirportService airportService) {
-        this.airportService = airportService;
+    public GeneralManagerService(FlightService flightService) {
+        this.flightService = flightService;
 
-        this.airportService.onSendMessageToGeneralManagerService(messageQueue::add);
+        this.flightService.onSendMessageToGeneralManagerService(messageQueue::add);
     }
     public void sendMessage(MessageFromGeneralManagerService messageFromGeneralManagerService) {
-        airportService.sendMessageFromGeneralManager(messageFromGeneralManagerService);
+        flightService.sendMessageFromGeneralManager(messageFromGeneralManagerService);
     }
 
 }

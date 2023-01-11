@@ -1,12 +1,23 @@
 package com.example.server.service.state;
 
-import com.example.server.service.AirportService;
+import com.example.server.model.*;
+import com.example.server.service.FlightService;
 
-public class GeneralManagerState implements AirportState {
-    public AirportService context;
+public class GeneralManagerState extends AbstractFlightState {
+    public GeneralManagerState(FlightService context) {
+        super(context);
+    }
+
 
     @Override
-    public void setContext(AirportService context) {
-        this.context = context;
+    public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
+        this.context.changeState(new StandManagerState(this.context));
+
+        MessageToStandManagerService messageToStandManagerService = new MessageToStandManagerService(
+                messageFromGeneralManagerService.message(),
+                messageFromGeneralManagerService.minutes()
+        );
+        this.context.sendMessageToStandManagerService.accept(messageToStandManagerService);
+
     }
 }

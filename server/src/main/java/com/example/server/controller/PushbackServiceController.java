@@ -1,25 +1,26 @@
 package com.example.server.controller;
 
 import com.example.server.model.MessageToService;
-import com.example.server.service.CateringService;
-import com.example.server.service.PilotService;
+import com.example.server.service.AirportService;
 import com.example.server.service.PushbackService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.server.service.Services;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.UUID;
 
 @RestController()
 @RequestMapping("pushback")
 public class PushbackServiceController extends MessageController<MessageToService, PushbackService> {
 
-
-    protected PushbackServiceController(PushbackService pushbackService) {
-        super(pushbackService);
+    protected PushbackServiceController(AirportService airportService) {
+        super(airportService, Services::pushbackService);
     }
 
-    @PostMapping("/sendfinished")
-    public void postMessage() {
-        service.finished();
+    @PostMapping("/finished")
+    public void postMessage(@RequestBody UUID flightNumber) {
+        airportService.getMessage(flightNumber).pushbackService().finished();
     }
 }

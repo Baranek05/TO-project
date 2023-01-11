@@ -1,30 +1,23 @@
 package com.example.server.service;
 
-
 import com.example.server.model.MessageToService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 
+public class PilotService extends MessageQueue<MessageToService> {
+    private final FlightService flightService;
 
-@Service
-public class PilotService extends RenameMe<MessageToService>{
+    public PilotService(FlightService flightService) {
+        this.flightService = flightService;
 
-    private final AirportService airportService;
-
-    @Autowired
-    public PilotService(AirportService airportService) {
-        this.airportService = airportService;
-
-        this.airportService.onSendMessageToPilotService(messageQueue::add);
+        this.flightService.onSendMessageToPilotService(messageQueue::add);
     }
 
     public void landed() {
-        airportService.pilotLanded();
+        flightService.pilotLanded();
     }
 
     public void finished() {
-        airportService.pilotFinished();
+        flightService.pilotFinished();
     }
 
 }

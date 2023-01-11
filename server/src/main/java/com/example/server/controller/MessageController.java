@@ -1,20 +1,30 @@
 package com.example.server.controller;
 
-import com.example.server.service.RenameMe;
+import com.example.server.service.AirportService;
+import com.example.server.service.MessageQueue;
+import com.example.server.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-public abstract class MessageController<TMessage, TService extends RenameMe<TMessage>> {
+import java.util.UUID;
+import java.util.function.Function;
 
-    protected final TService service;
+public abstract class MessageController<TMessage, TService extends MessageQueue<TMessage>> {
+
+    protected final AirportService airportService;
+    private final Function<Services, TService> serviceSelector;
 
     @Autowired
-    protected MessageController(TService service) {
-        this.service = service;
+    protected MessageController(AirportService airportService, Function<Services, TService> serviceSelector) {
+        this.airportService = airportService;
+        this.serviceSelector = serviceSelector;
     }
 
     @GetMapping("/getmessage")
-    public TMessage getMessage() {
+    public TMessage getMessage(@RequestParam UUID flightNumber) {
+        var get = airportService.getMessage(flightNumber);
+        var service = serviceSelector.apply(get);
         return service.getMessage();
     }
 

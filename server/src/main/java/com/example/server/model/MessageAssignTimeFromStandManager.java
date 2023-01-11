@@ -1,4 +1,6 @@
 package com.example.server.model;
 
-public record MessageAssignTimeFromStandManager(String message, int minutes, ServiceType service) {
+import java.util.UUID;
+
+public record MessageAssignTimeFromStandManager(UUID flightNumber, String message, int minutes, ServiceType service) {
 }

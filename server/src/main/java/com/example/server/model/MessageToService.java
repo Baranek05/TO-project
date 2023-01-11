@@ -1,4 +1,4 @@
 package com.example.server.model;
 
-public record MessageToService(MessageAssignTimeToService assignTime, MessageStartToService start) {
+public record MessageToService(MessageAssignTimeToService information, MessageStartToService start) {
 }

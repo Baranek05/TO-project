@@ -1,10 +1,12 @@
 package com.example.server.controller;
 
 import com.example.server.model.MessageToService;
+import com.example.server.service.AirportService;
 import com.example.server.service.PilotService;
-import com.example.server.service.PushbackService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.server.service.Services;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 
 @RestController()
@@ -12,18 +14,19 @@ import org.springframework.web.bind.annotation.*;
 public class PilotController extends MessageController<MessageToService, PilotService> {
 
 
-    protected PilotController(PilotService pilotService) {
-        super(pilotService);
+    protected PilotController(AirportService airportService) {
+        super(airportService, Services::pilotService);
     }
 
     @PostMapping("/landed")
-        public void postLanded() {
-            service.landed();
-        }
-
-    @PostMapping("/sendfinished")
-    public void postMessage() {
-        service.finished();
+    public void postLanded(@RequestBody UUID flightNumber) {
+        airportService.getMessage(flightNumber).pilotService().landed();
     }
+
+    @PostMapping("/finished")
+    public void postMessage(@RequestBody UUID flightNumber) {
+        airportService.getMessage(flightNumber).pilotService().finished();
+    }
+
 
 }

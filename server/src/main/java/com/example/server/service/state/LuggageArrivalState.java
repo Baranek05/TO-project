@@ -1,12 +1,18 @@
 package com.example.server.service.state;
 
-import com.example.server.service.AirportService;
+import com.example.server.model.MessageStartToService;
+import com.example.server.model.MessageToService;
+import com.example.server.service.FlightService;
 
-public class LuggageArrivalState implements AirportState  {
-    public AirportService context;
+
+public class LuggageArrivalState extends AbstractFlightState {
+    public LuggageArrivalState(FlightService context) {
+        super(context);
+    }
 
     @Override
-    public void setContext(AirportService context) {
-        this.context = context;
+    public void luggageFinished() {
+        this.context.changeState(new BoardingArrivalState(this.context));
+
     }
 }

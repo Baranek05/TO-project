@@ -3,10 +3,10 @@ package com.example.server.service;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public abstract class RenameMe<T> {
+public abstract class MessageQueue<T> {
     protected final Queue<T> messageQueue;
 
-    public RenameMe() {
+    public MessageQueue() {
         messageQueue = new LinkedList<>();
     }
 

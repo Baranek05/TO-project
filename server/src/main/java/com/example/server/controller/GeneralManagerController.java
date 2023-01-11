@@ -2,21 +2,25 @@ package com.example.server.controller;
 
 import com.example.server.model.MessageFromGeneralManagerService;
 import com.example.server.model.MessageToGeneralManagerService;
+import com.example.server.service.AirportService;
 import com.example.server.service.GeneralManagerService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.server.service.Services;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController()
 @RequestMapping("generalmanager")
 public class GeneralManagerController extends MessageController<MessageToGeneralManagerService, GeneralManagerService>{
 
 
-    protected GeneralManagerController(GeneralManagerService generalManagerService) {
-        super(generalManagerService);
+    protected GeneralManagerController(AirportService airportService) {
+        super(airportService, Services::generalManagerService);
     }
 
-    @PostMapping("/sendmessage")
+    @PostMapping("/finished")
     public void postMessage(@RequestBody MessageFromGeneralManagerService messageFromGeneralManagerService) {
-        service.sendMessage(messageFromGeneralManagerService);
+        airportService.getMessage(messageFromGeneralManagerService.flightNumber()).generalManagerService().sendMessage(messageFromGeneralManagerService);
     }
+
 }

@@ -1,5 +1,7 @@
 package com.example.server.model;
 
 
-public record MessageFromGeneralManagerService(String message, int minutes) {
+import java.util.UUID;
+
+public record MessageFromGeneralManagerService(UUID flightNumber, String message, int minutes) {
 }
