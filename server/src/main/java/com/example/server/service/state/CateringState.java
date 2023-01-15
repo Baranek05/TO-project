@@ -13,8 +13,7 @@ public class CateringState extends AbstractFlightState {
     public void cateringFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
 
-        this.context.changeState(new BoardingDepartureState(this.context));
-        this.context.sendMessageToBoardingService.accept(messageStartToService);
+        this.context.changeState(new LuggageDepartureState(this.context));
         this.context.sendMessageToLuggageService.accept(messageStartToService);
     }
 }

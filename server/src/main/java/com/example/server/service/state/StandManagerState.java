@@ -15,7 +15,6 @@ public class StandManagerState extends AbstractFlightState {
     public void standManagerFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
         this.context.changeState(new LuggageArrivalState(this.context));
-        this.context.sendMessageToBoardingService.accept(messageStartToService);
         this.context.sendMessageToLuggageService.accept(messageStartToService);
     }
 

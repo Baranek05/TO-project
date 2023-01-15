@@ -14,7 +14,7 @@ public class PushbackState extends AbstractFlightState {
     public void pushbackFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
 
-        this.context.changeState(new FinalState(this.context));
+        this.context.changeState(new ReadyState(this.context));
         this.context.sendMessageToPilotService.accept(messageStartToService);
     }
 }

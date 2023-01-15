@@ -12,7 +12,9 @@ public class LuggageArrivalState extends AbstractFlightState {
 
     @Override
     public void luggageFinished() {
-        this.context.changeState(new BoardingArrivalState(this.context));
+        var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
 
+        this.context.changeState(new BoardingArrivalState(this.context));
+        this.context.sendMessageToBoardingService.accept(messageStartToService);
     }
 }

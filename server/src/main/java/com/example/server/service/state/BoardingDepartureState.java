@@ -13,7 +13,7 @@ public class BoardingDepartureState extends AbstractFlightState {
     public void boardingDepartureFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
 
-        this.context.changeState(new LuggageDepartureState(this.context));
-
+        this.context.changeState(new PilotToPushbackState(this.context));
+        this.context.sendMessageToPilotService.accept(messageStartToService);
     }
 }
