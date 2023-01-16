@@ -23,6 +23,16 @@ public class WorkDataBase {
     }
 
     public List<WorkOrder> findByFlight(int flightNumber) {
-        return workOrders.stream().filter(workOrder -> workOrder.getFlightNumber() == flightNumber).toList();
+        List<WorkOrder> workOrderListByFlight = new ArrayList<>();
+        Iterator<WorkOrder> workOrderIterator = workOrders.iterator();
+
+        while(workOrderIterator.hasNext()) {
+            WorkOrder next = workOrderIterator.next();
+            if (next.getFlightNumber() == flightNumber){
+                workOrderListByFlight.add(workOrderIterator.next());
+            }
+        }
+
+        return workOrderListByFlight;
     }
 }

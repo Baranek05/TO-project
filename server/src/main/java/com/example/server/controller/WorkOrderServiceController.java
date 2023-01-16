@@ -3,6 +3,7 @@ package com.example.server.controller;
 import com.example.server.model.WorkOrder;
 import com.example.server.service.WorkService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,4 +23,10 @@ public class WorkOrderServiceController {
     public List<WorkOrder> getAllWorkOrders() {
         return service.getAll();
     }
+
+    @GetMapping("/all/{flightNumber}")
+    public List<WorkOrder> getWorkOrdersByFlight(@PathVariable int flightNumber) {
+        return service.getByFlightNumber(flightNumber);
+    }
+
 }

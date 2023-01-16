@@ -7,7 +7,6 @@ import com.example.server.model.WorkOrder;
 import com.example.server.storage.WorkDataBase;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -68,5 +67,9 @@ public class WorkService {
                 .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
                 .findFirst()
                 .ifPresent(WorkOrder::start);
+    }
+
+    public List<WorkOrder> getByFlightNumber(int flightNumber) {
+        return workDataBase.findByFlight(flightNumber);
     }
 }

@@ -38,9 +38,4 @@ public class EmployeeDataBase {
     public List<Employee> getAll() {
         return employeeList;
     }
-
-    public void update(Employee assignee) {
-        employeeList.remove(assignee);
-        employeeList.add(assignee);
-    }
 }
