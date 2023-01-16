@@ -17,12 +17,12 @@ public class BoardingServiceController extends MessageController<MessageToServic
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).boardingService().finished();
     }
 
     @PostMapping("/finisheddeparture")
-    public void postDepartureMessage(@RequestBody UUID flightNumber) {
+    public void postDepartureMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).boardingService().finishedDeparture();
     }
 }

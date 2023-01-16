@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Service
 public class AirportService {
-    private final Map<UUID, Services> stateByFlightNumber;
+    private final Map<Integer, Services> stateByFlightNumber;
 
     public AirportService() {
         stateByFlightNumber = new HashMap<>();
@@ -32,7 +32,7 @@ public class AirportService {
         );
     }
 
-    public Services getMessage(UUID flightNumber) {
+    public Services getMessage(int flightNumber) {
         if(!stateByFlightNumber.containsKey(flightNumber))
             stateByFlightNumber.put(flightNumber, services());
 

@@ -19,12 +19,12 @@ public class PilotController extends MessageController<MessageToService, PilotSe
     }
 
     @PostMapping("/landed")
-    public void postLanded(@RequestBody UUID flightNumber) {
+    public void postLanded(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).pilotService().landed();
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).pilotService().finished();
     }
 

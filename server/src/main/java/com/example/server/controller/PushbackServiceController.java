@@ -20,7 +20,7 @@ public class PushbackServiceController extends MessageController<MessageToServic
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).pushbackService().finished();
     }
 }

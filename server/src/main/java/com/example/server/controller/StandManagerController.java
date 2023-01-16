@@ -24,7 +24,7 @@ public class StandManagerController extends MessageController<MessageToStandMana
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).standManagerService().finished();
     }
 }

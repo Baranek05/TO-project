@@ -20,7 +20,7 @@ public class TankingServiceController extends MessageController<MessageToService
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).tankingService().finished();
     }
 }

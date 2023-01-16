@@ -22,7 +22,7 @@ public abstract class MessageController<TMessage, TService extends MessageQueue<
     }
 
     @GetMapping("/getmessage")
-    public TMessage getMessage(@RequestParam UUID flightNumber) {
+    public TMessage getMessage(@RequestParam int flightNumber) {
         var get = airportService.getMessage(flightNumber);
         var service = serviceSelector.apply(get);
         return service.getMessage();

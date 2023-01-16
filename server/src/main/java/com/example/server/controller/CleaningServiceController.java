@@ -20,7 +20,7 @@ public class CleaningServiceController extends MessageController<MessageToServic
     }
 
     @PostMapping("/finished")
-    public void postMessage(@RequestBody UUID flightNumber) {
+    public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).cleaningService().finished();
     }
 }
