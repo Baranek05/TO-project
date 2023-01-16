@@ -11,6 +11,7 @@ public class WorkOrder {
     private Employee assignee;
     private Instant startDate;
     private Instant completionDate;
+    private ServiceType serviceType;
 
     private WorkOrder(UUID uuid) {
         this.uuid = uuid;
@@ -44,6 +45,10 @@ public class WorkOrder {
         this.completionDate = Instant.now();
     }
 
+    public ServiceType getServiceType() {
+        return serviceType;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -74,6 +79,7 @@ public class WorkOrder {
         private int estimatedTimeInMinutes;
         private int flightNumber;
         private Employee assignee;
+        private ServiceType serviceType;
         private Instant startDate;
         private Instant completionDate;
 
@@ -97,12 +103,18 @@ public class WorkOrder {
             return this;
         }
 
+        public Builder serviceType(ServiceType serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+
         public WorkOrder build() {
             if(flightNumber == 0){
                 throw new IllegalStateException("Flight number required.");
             }
 
             WorkOrder work = id != null ? new WorkOrder(id) : new WorkOrder(UUID.randomUUID());
+            work.serviceType = serviceType;
             work.estimatedTimeInMinutes = estimatedTimeInMinutes;
             work.assignee = assignee;
             work.flightNumber = flightNumber;

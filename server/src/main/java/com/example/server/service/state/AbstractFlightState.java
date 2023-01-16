@@ -12,17 +12,20 @@ public class AbstractFlightState implements FlightState {
     }
 
     @Override
-    public void pilotLanded() {
+    public void pilotLanded(int flightNumber) {
         throw new RuntimeException("bad state");
     }
-@Override
-public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
-    throw new RuntimeException("bad state");
-}
-@Override
-public void sendMessageFromStandManager(MessageAssignTimeFromStandManager messageAssignTimeFromStandManagerService)  {
-    throw new RuntimeException("bad state");
-}
+
+    @Override
+    public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
+        throw new RuntimeException("bad state");
+    }
+
+    @Override
+    public void sendMessageFromStandManager(MessageAssignTimeFromStandManager messageAssignTimeFromStandManagerService) {
+        throw new RuntimeException("bad state");
+    }
+
     @Override
     public void standManagerFinished() {
         throw new RuntimeException("bad state");

@@ -2,13 +2,11 @@ package com.example.server.service;
 
 import com.example.server.model.MessageFromGeneralManagerService;
 import com.example.server.model.MessageToGeneralManagerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 
 public class GeneralManagerService extends MessageQueue<MessageToGeneralManagerService> {
 
-    private FlightService flightService;
+    private final FlightService flightService;
 
 
     public GeneralManagerService(FlightService flightService) {

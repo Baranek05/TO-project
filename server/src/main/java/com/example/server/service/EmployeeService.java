@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class EmployeeService {
@@ -29,11 +28,5 @@ public class EmployeeService {
 
     public List<Employee> getAllEmployees() {
         return employeeDataBase.getAll();
-    }
-
-    public void assign(Employee assignee, UUID uuid) {
-        assignee.setWorkOrderId(uuid);
-        assignee.setAssigned(true);
-        employeeDataBase.update(assignee);
     }
 }

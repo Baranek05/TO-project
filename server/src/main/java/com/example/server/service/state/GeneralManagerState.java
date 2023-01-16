@@ -15,7 +15,8 @@ public class GeneralManagerState extends AbstractFlightState {
 
         MessageToStandManagerService messageToStandManagerService = new MessageToStandManagerService(
                 messageFromGeneralManagerService.message(),
-                messageFromGeneralManagerService.minutes()
+                messageFromGeneralManagerService.minutes(),
+                messageFromGeneralManagerService.flightNumber()
         );
         this.context.sendMessageToStandManagerService.accept(messageToStandManagerService);
 

@@ -17,4 +17,12 @@ public class WorkDataBase {
     public void save(WorkOrder work) {
         workOrders.add(work);
     }
+
+    public List<WorkOrder> findAll() {
+        return workOrders;
+    }
+
+    public List<WorkOrder> findByFlight(int flightNumber) {
+        return workOrders.stream().filter(workOrder -> workOrder.getFlightNumber() == flightNumber).toList();
+    }
 }

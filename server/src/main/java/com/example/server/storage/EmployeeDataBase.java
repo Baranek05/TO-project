@@ -31,7 +31,6 @@ public class EmployeeDataBase {
 
     public List<Employee> getAvailableOnPosition(ServiceType serviceType) {
         return employeeList.stream()
-                .filter(employee -> !employee.isAssigned())
                 .filter(employee -> employee.getServiceType().equals(serviceType))
                 .toList();
     }

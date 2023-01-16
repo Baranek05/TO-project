@@ -10,7 +10,7 @@ public class ReadyState extends AbstractFlightState {
 
 
     @Override
-    public void pilotLanded() {
+    public void pilotLanded(int flightNumber) {
         this.context.changeState(new GeneralManagerState(this.context));
-        this.context.sendMessageToGeneralManagerService.accept(new MessageToGeneralManagerService());    }
+        this.context.sendMessageToGeneralManagerService.accept(new MessageToGeneralManagerService(flightNumber));    }
 }

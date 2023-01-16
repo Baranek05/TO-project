@@ -1,18 +1,22 @@
 package com.example.server.service;
 
 import com.example.server.model.MessageToService;
+import com.example.server.model.ServiceType;
 
 public class BoardingService extends MessageQueue<MessageToService> {
     private final FlightService flightService;
+    private final WorkService workService;
 
-    public BoardingService(FlightService flightService) {
+    public BoardingService(FlightService flightService, WorkService workService) {
         this.flightService = flightService;
+        this.workService = workService;
 
         this.flightService.onSendMessageToBoardingService(messageQueue::add);
     }
 
-    public void finished() {
+    public void finished(int flightNumber) {
         flightService.boardingFinished();
+        workService.completeStage(flightNumber, ServiceType.BOARDING_SERVICE);
     }
     public void finishedDeparture() {
         flightService.boardingDepartureFinished();

@@ -12,8 +12,8 @@ public class PilotService extends MessageQueue<MessageToService> {
         this.flightService.onSendMessageToPilotService(messageQueue::add);
     }
 
-    public void landed() {
-        flightService.pilotLanded();
+    public void landed(int flightNumber) {
+        flightService.pilotLanded(flightNumber);
     }
 
     public void finished() {

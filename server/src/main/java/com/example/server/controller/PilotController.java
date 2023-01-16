@@ -4,9 +4,10 @@ import com.example.server.model.MessageToService;
 import com.example.server.service.AirportService;
 import com.example.server.service.PilotService;
 import com.example.server.service.Services;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController()
@@ -18,13 +19,13 @@ public class PilotController extends MessageController<MessageToService, PilotSe
         super(airportService, Services::pilotService);
     }
 
-    @PostMapping("/landed")
-    public void postLanded(@RequestBody int flightNumber) {
-        airportService.getMessage(flightNumber).pilotService().landed();
+    @PostMapping("/landed/{flightNumber}")
+    public void postLanded(@PathVariable int flightNumber) {
+        airportService.getMessage(flightNumber).pilotService().landed(flightNumber);
     }
 
-    @PostMapping("/finished")
-    public void postMessage(@RequestBody int flightNumber) {
+    @PostMapping("/finished/{flightNumber}")
+    public void postMessage(@PathVariable int flightNumber) {
         airportService.getMessage(flightNumber).pilotService().finished();
     }
 

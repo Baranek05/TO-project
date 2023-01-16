@@ -5,10 +5,7 @@ import com.example.server.model.MessageToStandManagerService;
 import com.example.server.service.AirportService;
 import com.example.server.service.Services;
 import com.example.server.service.StandManagerService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("standmanager")
@@ -23,8 +20,8 @@ public class StandManagerController extends MessageController<MessageToStandMana
         airportService.getMessage(messageAssignTimeFromStandManager.flightNumber()).standManagerService().sendMessage(messageAssignTimeFromStandManager);
     }
 
-    @PostMapping("/finished")
-    public void postMessage(@RequestBody int flightNumber) {
+    @PostMapping("/finished/{flightNumber}")
+    public void postMessage(@PathVariable int flightNumber) {
         airportService.getMessage(flightNumber).standManagerService().finished();
     }
 

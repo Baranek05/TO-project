@@ -52,8 +52,8 @@ public class FlightService {
     public void onSendMessageToPushbackService(Consumer<MessageToService> action) {
         sendMessageToPushbackService = action;
     }
-    public void pilotLanded() {
-        this.state.pilotLanded();
+    public void pilotLanded(int flightNumber) {
+        this.state.pilotLanded(flightNumber);
     }
     public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
         this.state.sendMessageFromGeneralManager(messageFromGeneralManagerService);

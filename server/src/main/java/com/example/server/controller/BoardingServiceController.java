@@ -3,11 +3,11 @@ package com.example.server.controller;
 import com.example.server.model.MessageToService;
 import com.example.server.service.AirportService;
 import com.example.server.service.BoardingService;
-
 import com.example.server.service.Services;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("boarding")
@@ -16,13 +16,13 @@ public class BoardingServiceController extends MessageController<MessageToServic
         super(airportService, Services::boardingService);
     }
 
-    @PostMapping("/finished")
-    public void postMessage(@RequestBody int flightNumber) {
-        airportService.getMessage(flightNumber).boardingService().finished();
+    @PostMapping("/finished/{flightNumber}")
+    public void postMessage(@PathVariable int flightNumber) {
+        airportService.getMessage(flightNumber).boardingService().finished(flightNumber);
     }
 
-    @PostMapping("/finisheddeparture")
-    public void postDepartureMessage(@RequestBody int flightNumber) {
+    @PostMapping("/finisheddeparture/{flightNumber}")
+    public void postDepartureMessage(@PathVariable int flightNumber) {
         airportService.getMessage(flightNumber).boardingService().finishedDeparture();
     }
 }
