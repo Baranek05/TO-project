@@ -18,4 +18,16 @@ public class StandManagerService extends MessageQueue<MessageToStandManagerServi
         flightService.standManagerFinished();
     }
 
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
+
+    public Optional<Employee> findAvailableEmployee(ServiceType service) {
+        return employeeService.getAvailableEmployeesByResponsibility(service).stream().findFirst();
+    }
+
+    public void saveWorkOrder(WorkOrder build) {
+        this.workService.addWork(build);
+        this.employeeService.assign(build.getAssignee(), build.getUuid());
+    }
 }

@@ -8,8 +8,6 @@ import com.example.server.service.Services;
 import com.example.server.service.StandManagerService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.UUID;
-
 @RestController()
 @RequestMapping("standmanager")
 public class StandManagerController extends MessageController<MessageToStandManagerService, StandManagerService> {
@@ -27,4 +25,11 @@ public class StandManagerController extends MessageController<MessageToStandMana
     public void postMessage(@RequestBody int flightNumber) {
         airportService.getMessage(flightNumber).standManagerService().finished();
     }
+
+    @GetMapping("/allEmployees")
+    public List<Employee> getAllEmployees() {
+        return service.getAllEmployees();
+    }
+
+
 }
