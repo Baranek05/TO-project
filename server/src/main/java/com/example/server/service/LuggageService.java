@@ -16,10 +16,13 @@ public class LuggageService extends MessageQueue<MessageToService> {
 
     public void finished(int flightNumber) {
         flightService.luggageFinished();
+        workService.startWork(flightNumber, ServiceType.BOARDING_SERVICE);
         workService.completeStage(flightNumber, ServiceType.LUGGAGE_SERVICE);
     }
 
-    public void finishedDeparture() {
+    public void finishedDeparture(int flightNumber) {
         flightService.luggageDepartureFinished();
+        workService.startWork(flightNumber, ServiceType.PUSHBACK_SERVICE);
+        workService.completeStage(flightNumber, ServiceType.LUGGAGE_SERVICE);
     }
 }

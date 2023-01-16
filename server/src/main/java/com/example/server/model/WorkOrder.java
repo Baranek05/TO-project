@@ -45,6 +45,10 @@ public class WorkOrder {
         this.completionDate = Instant.now();
     }
 
+    public void start() {
+        this.startDate = Instant.now();
+    }
+
     public ServiceType getServiceType() {
         return serviceType;
     }

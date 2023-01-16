@@ -16,10 +16,13 @@ public class BoardingService extends MessageQueue<MessageToService> {
 
     public void finished(int flightNumber) {
         flightService.boardingFinished();
+        workService.startWork(flightNumber, ServiceType.CLEANING_SERVICE);
         workService.completeStage(flightNumber, ServiceType.BOARDING_SERVICE);
     }
-    public void finishedDeparture() {
+    public void finishedDeparture(int flightNumber) {
         flightService.boardingDepartureFinished();
+        workService.startWork(flightNumber, ServiceType.LUGGAGE_SERVICE);
+        workService.completeStage(flightNumber, ServiceType.BOARDING_SERVICE);
     }
 
 

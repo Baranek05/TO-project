@@ -23,6 +23,6 @@ public class BoardingServiceController extends MessageController<MessageToServic
 
     @PostMapping("/finisheddeparture/{flightNumber}")
     public void postDepartureMessage(@PathVariable int flightNumber) {
-        airportService.getMessage(flightNumber).boardingService().finishedDeparture();
+        airportService.getMessage(flightNumber).boardingService().finishedDeparture(flightNumber);
     }
 }

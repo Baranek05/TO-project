@@ -15,6 +15,7 @@ public class TankingService extends MessageQueue<MessageToService> {
     }
     public void finished(int flightNumber) {
         flightService.tankingFinished();
+        workService.startWork(flightNumber, ServiceType.CATERING_SERVICE);
         workService.completeStage(flightNumber, ServiceType.TANKING_SERVICE);
     }
 

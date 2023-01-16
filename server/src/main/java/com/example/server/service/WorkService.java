@@ -36,7 +36,6 @@ public class WorkService {
                 .assignee(availableEmployee.get())
                 .estimatedTimeInMinutes(messageAssignTimeFromStandManagerService.minutes())
                 .serviceType(messageAssignTimeFromStandManagerService.service())
-                .startDate(Instant.now())
                 .build();
 
         workDataBase.save(workOrder);
@@ -62,5 +61,12 @@ public class WorkService {
                 .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
                 .findFirst()
                 .ifPresent(WorkOrder::complete);
+    }
+
+    public void startWork(int flightNumber, ServiceType serviceType) {
+        workDataBase.findByFlight(flightNumber).stream()
+                .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
+                .findFirst()
+                .ifPresent(WorkOrder::start);
     }
 }

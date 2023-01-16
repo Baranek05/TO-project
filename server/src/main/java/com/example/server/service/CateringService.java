@@ -16,6 +16,7 @@ public class CateringService extends MessageQueue<MessageToService> {
 
     public void finished(int flightNumber) {
         flightService.cateringFinished();
+        workService.startWork(flightNumber, ServiceType.BOARDING_SERVICE);
         workService.completeStage(flightNumber, ServiceType.CATERING_SERVICE);
     }
 }

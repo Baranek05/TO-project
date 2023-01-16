@@ -24,6 +24,6 @@ public class LuggageServiceController extends MessageController<MessageToService
 
     @PostMapping("/finisheddeparture/{flightNumber}")
     public void postDepartureMessage(@PathVariable int flightNumber) {
-        airportService.getMessage(flightNumber).luggageService().finishedDeparture();
+        airportService.getMessage(flightNumber).luggageService().finishedDeparture(flightNumber);
     }
 }

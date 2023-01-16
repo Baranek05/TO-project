@@ -2,6 +2,7 @@ package com.example.server.service;
 
 import com.example.server.model.MessageAssignTimeFromStandManager;
 import com.example.server.model.MessageToStandManagerService;
+import com.example.server.model.ServiceType;
 
 public class StandManagerService extends MessageQueue<MessageToStandManagerService> {
     private final FlightService flightService;
@@ -18,7 +19,8 @@ public class StandManagerService extends MessageQueue<MessageToStandManagerServi
         workService.createAndAssignWork(messageAssignTimeFromStandManagerService);
         flightService.sendMessageFromStandManager(messageAssignTimeFromStandManagerService);
     }
-    public void finished() {
+    public void finished(int flightNumber) {
+        workService.startWork(flightNumber, ServiceType.LUGGAGE_SERVICE);
         flightService.standManagerFinished();
     }
 

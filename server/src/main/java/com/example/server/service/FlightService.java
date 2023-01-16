@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 
 public class FlightService {
     public FlightState state;
+    public WorkService workService;
 
     public Consumer<MessageToGeneralManagerService> sendMessageToGeneralManagerService;
     public Consumer<MessageToStandManagerService> sendMessageToStandManagerService;

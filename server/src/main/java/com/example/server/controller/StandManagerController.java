@@ -22,7 +22,7 @@ public class StandManagerController extends MessageController<MessageToStandMana
 
     @PostMapping("/finished/{flightNumber}")
     public void postMessage(@PathVariable int flightNumber) {
-        airportService.getMessage(flightNumber).standManagerService().finished();
+        airportService.getMessage(flightNumber).standManagerService().finished(flightNumber);
     }
 
 }

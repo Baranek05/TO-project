@@ -15,6 +15,7 @@ public class CleaningService extends MessageQueue<MessageToService> {
     }
     public void finished(int flightNumber) {
         airportService.cleaningFinished();
+        workService.startWork(flightNumber, ServiceType.TANKING_SERVICE);
         workService.completeStage(flightNumber, ServiceType.CLEANING_SERVICE);
     }
 
