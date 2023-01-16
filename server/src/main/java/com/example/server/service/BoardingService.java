@@ -21,8 +21,8 @@ public class BoardingService extends MessageQueue<MessageToService> {
     }
     public void finishedDeparture(int flightNumber) {
         flightService.boardingDepartureFinished();
-        workService.startWork(flightNumber, ServiceType.LUGGAGE_SERVICE);
-        workService.completeStage(flightNumber, ServiceType.BOARDING_SERVICE);
+        workService.startWork(flightNumber, ServiceType.LUGGAGE_SERVICE, true);
+        workService.completeStage(flightNumber, ServiceType.BOARDING_SERVICE, true);
     }
 
 

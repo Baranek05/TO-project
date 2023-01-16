@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="working solution">
+    <list default="true" id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="iterator on workOrder list to find workorders for flightnumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/WorkOrderServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/WorkOrderServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/WorkOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/WorkOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CateringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CateringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/LuggageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/LuggageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/WorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/WorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/EmployeeDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/EmployeeDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/TankingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/TankingState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/WorkDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/WorkDataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673102701131</updated>
       <workItem from="1673102703943" duration="23212000" />
-      <workItem from="1673885703498" duration="11530000" />
+      <workItem from="1673885703498" duration="12902000" />
     </task>
     <task id="LOCAL-00001" summary="basic logic solution">
       <created>1673034939154</created>
@@ -127,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673893963793</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="iterator on workOrder list to find workorders for flightnumber">
+      <created>1673897292803</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673897292803</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +159,8 @@
     <MESSAGE value="filghtid to int" />
     <MESSAGE value="partial solution for creating and completing work orders" />
     <MESSAGE value="working solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="working solution" />
+    <MESSAGE value="iterator on workOrder list to find workorders for flightnumber" />
+    <option name="LAST_COMMIT_MESSAGE" value="iterator on workOrder list to find workorders for flightnumber" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

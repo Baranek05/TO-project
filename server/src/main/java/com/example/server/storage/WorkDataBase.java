@@ -29,7 +29,7 @@ public class WorkDataBase {
         while(workOrderIterator.hasNext()) {
             WorkOrder next = workOrderIterator.next();
             if (next.getFlightNumber() == flightNumber){
-                workOrderListByFlight.add(workOrderIterator.next());
+                workOrderListByFlight.add(next);
             }
         }
 

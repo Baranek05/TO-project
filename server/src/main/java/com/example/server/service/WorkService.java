@@ -30,14 +30,18 @@ public class WorkService {
             return;
         }
 
-        WorkOrder workOrder = new WorkOrder.Builder()
+        WorkOrder.Builder builder = new WorkOrder.Builder()
                 .flightNumber(messageAssignTimeFromStandManagerService.flightNumber())
                 .assignee(availableEmployee.get())
                 .estimatedTimeInMinutes(messageAssignTimeFromStandManagerService.minutes())
-                .serviceType(messageAssignTimeFromStandManagerService.service())
-                .build();
+                .serviceType(messageAssignTimeFromStandManagerService.service());
 
-        workDataBase.save(workOrder);
+        workDataBase.save(builder.build());
+        if (messageAssignTimeFromStandManagerService.service().equals(ServiceType.BOARDING_SERVICE)
+                || messageAssignTimeFromStandManagerService.service().equals(ServiceType.LUGGAGE_SERVICE))
+        {
+            workDataBase.save(builder.isDeparture(true).build());
+        }
     }
 
     private Optional<Employee> getAvailableEmployee(List<Employee> employees, ServiceType serviceType) {
@@ -62,9 +66,25 @@ public class WorkService {
                 .ifPresent(WorkOrder::complete);
     }
 
+    public void completeStage(int flightNumber, ServiceType serviceType, boolean isDeparture) {
+        workDataBase.findByFlight(flightNumber).stream()
+                .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
+                .filter(WorkOrder::isDeparture)
+                .findFirst()
+                .ifPresent(WorkOrder::complete);
+    }
+
     public void startWork(int flightNumber, ServiceType serviceType) {
         workDataBase.findByFlight(flightNumber).stream()
                 .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
+                .findFirst()
+                .ifPresent(WorkOrder::start);
+    }
+
+    public void startWork(int flightNumber, ServiceType serviceType, boolean isDeparture) {
+        workDataBase.findByFlight(flightNumber).stream()
+                .filter(workOrder -> workOrder.getServiceType().equals(serviceType))
+                .filter(WorkOrder::isDeparture)
                 .findFirst()
                 .ifPresent(WorkOrder::start);
     }

@@ -23,6 +23,6 @@ public class LuggageService extends MessageQueue<MessageToService> {
     public void finishedDeparture(int flightNumber) {
         flightService.luggageDepartureFinished();
         workService.startWork(flightNumber, ServiceType.PUSHBACK_SERVICE);
-        workService.completeStage(flightNumber, ServiceType.LUGGAGE_SERVICE);
+        workService.completeStage(flightNumber, ServiceType.LUGGAGE_SERVICE, true);
     }
 }

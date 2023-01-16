@@ -12,6 +12,7 @@ public class WorkOrder {
     private Instant startDate;
     private Instant completionDate;
     private ServiceType serviceType;
+    private boolean isDeparture;
 
     private WorkOrder(UUID uuid) {
         this.uuid = uuid;
@@ -39,6 +40,10 @@ public class WorkOrder {
 
     public Instant getCompletionDate() {
         return completionDate;
+    }
+
+    public boolean isDeparture() {
+        return isDeparture;
     }
 
     public void complete(){
@@ -75,6 +80,7 @@ public class WorkOrder {
                 ", assignee=" + assignee +
                 ", startDate=" + startDate +
                 ", completionDate=" + completionDate +
+                ", isDeparture=" + isDeparture +
                 '}';
     }
 
@@ -86,6 +92,7 @@ public class WorkOrder {
         private ServiceType serviceType;
         private Instant startDate;
         private Instant completionDate;
+        private boolean isDeparture;
 
         public Builder estimatedTimeInMinutes(int estimatedTimeInMinutes) {
             this.estimatedTimeInMinutes = estimatedTimeInMinutes;
@@ -111,6 +118,10 @@ public class WorkOrder {
             this.serviceType = serviceType;
             return this;
         }
+        public Builder isDeparture(boolean isDeparture) {
+            this.isDeparture = isDeparture;
+            return this;
+        }
 
         public WorkOrder build() {
             if(flightNumber == 0){
@@ -123,6 +134,7 @@ public class WorkOrder {
             work.assignee = assignee;
             work.flightNumber = flightNumber;
             work.startDate = startDate;
+            work.isDeparture = isDeparture;
             return work;
         }
     }

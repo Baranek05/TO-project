@@ -12,7 +12,6 @@ public class TankingState extends AbstractFlightState {
     @Override
     public void tankingFinished() {
         var messageStartToService = new MessageToService(null, new MessageStartToService("START"));
-        this.context.cateringFinished();
         this.context.changeState(new CateringState(this.context));
         this.context.sendMessageToCateringService.accept(messageStartToService);
     }
