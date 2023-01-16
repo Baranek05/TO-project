@@ -32,5 +32,5 @@ serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
    
    Mediator - kierownik naczelny
    
-   Iterator - użycie do przechodzenia po liście pracowników w celu znalezienia pracownika spełniającego kryteria 
-          iteracji (np.wolnego w danym terminie lub o najlepszych kwalifikacjach) 
+   Iterator - użycie do przechodzenia po liście WorkOrders w celu znalezienia prac spełniających kryteria 
+          iteracji (po numerze lotu) 
