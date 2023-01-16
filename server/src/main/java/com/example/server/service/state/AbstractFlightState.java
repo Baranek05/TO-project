@@ -13,66 +13,79 @@ public class AbstractFlightState implements FlightState {
 
     @Override
     public void pilotLanded(int flightNumber) {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: ReadyState actual: " + thisClassName);
     }
 
     @Override
     public void sendMessageFromGeneralManager(MessageFromGeneralManagerService messageFromGeneralManagerService) {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: GeneralManagerState actual: " + thisClassName);
     }
 
     @Override
     public void sendMessageFromStandManager(MessageAssignTimeFromStandManager messageAssignTimeFromStandManagerService) {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: StandManagerState actual: " + thisClassName);
     }
 
     @Override
     public void standManagerFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: StandManagerState actual: " + thisClassName);
     }
 
     @Override
     public void luggageFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: LuggageArrivalState actual: " + thisClassName);
     }
 
     @Override
     public void boardingFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: BoardingArrivalState actual: " + thisClassName);
     }
 
     @Override
     public void cleaningFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: CleaningState actual: " + thisClassName);
     }
 
     @Override
     public void tankingFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: TankingState actual: " + thisClassName);
     }
 
     @Override
     public void cateringFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: CateringState actual: " + thisClassName);
     }
 
     @Override
     public void luggageDepartureFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: LuggageDepartureState actual: " + thisClassName);
     }
 
     @Override
     public void boardingDepartureFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: BoardingDepartureState actual: " + thisClassName);
     }
 
     @Override
     public void pilotFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: PilotToPushbackState actual: " + thisClassName);
     }
 
     @Override
     public void pushbackFinished() {
-        throw new RuntimeException("bad state");
+        var thisClassName = this.getClass().getName();
+        throw new RuntimeException("bad state, expected: PushbackState actual: " + thisClassName);
     }
 }
