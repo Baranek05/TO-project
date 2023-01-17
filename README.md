@@ -11,20 +11,17 @@ odliczanie czasu do odlotu maszyny.
 Role pracowników dostępnych w systemie to kierownik naczelny, 
 kierownik stanowiska, pilot, serwis bagażowy, serwis cateringowy, serwis sprzątający, 
 serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
-2) Wzorce strukturalne: Pełnomocnik, Dekorator 
+2) Wzorce strukturalne: Fasada
 
-   Wzorce behawioralne: Obserwator, Polecenie, Iterator, Mediator
+   Wzorce behawioralne: Stan, Metoda Szablonowa, Iterator
    
    Wzorce kreacyjne: Builder, Singleton
-3) Pełnomocnik - stworzenie nowej klasy pośredniczącej, która po otrzymaniu żądania od klienta przeprowadzi kontrolę dostępu i następnie utworzy obiekt usługi i przekaże mu żądanie
-
-   Dekorator - utworzenie dekoratora, który opakowujac obiekty ułatwi przesyłanie informacji na lotnisku wieloma 
-          kanałami jednocześnie np. w przypadku opóźnienia lotu
+   
+3) Metoda szablonowa - utworzenie abstract flight state zawierającego metody poszczególnych stanów. Konkretne stany nadpisują metodę która dotyczy ich stanu np.          PilotState nadpisuje metodę landed(). Jeżeli metoda zostanie użyta w innym stanie pojawia się błąd.
           
-   Obserwator - ulatwienie publikacji komunikatów do wszystkich odbiorców, poprzez dodanie mechanizmu subskrypcji do 
-          klasy wysyłającej komunikaty
+   Stan - utworzenie stanu dla każdego etapu działania poszczególnych serwisów, utworzenie kolejności zdarzeń - jeżeli aiport service posiada konkretny stan nie możemy w    nim wywołać działań dla innch stanów
           
-   Polecenie - stworzenie łącza pomiędzy obiektami interfejsu użytkownika i logiki biznesowej, tworzenie kolejki poleceń
+   Fasada - stworzenie rekordu zawierającego wszystkie serwisy dla danego lotu, które przechowywane są w airport service
    
    Builder - budowanie obiektu zawierającego informacje o rodzaju pracy do wykonania
    
