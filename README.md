@@ -15,7 +15,7 @@ serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
 
    Wzorce behawioralne: Obserwator, Polecenie, Iterator, Mediator
    
-   Wzorce kreacyjne: Builder, Metoda wytwórcza
+   Wzorce kreacyjne: Builder, Singleton
 3) Pełnomocnik - stworzenie nowej klasy pośredniczącej, która po otrzymaniu żądania od klienta przeprowadzi kontrolę dostępu i następnie utworzy obiekt usługi i przekaże mu żądanie
 
    Dekorator - utworzenie dekoratora, który opakowujac obiekty ułatwi przesyłanie informacji na lotnisku wieloma 
@@ -28,9 +28,7 @@ serwis boardingowy, serwis wypychający, serwis tankujący, serwis "follow me".
    
    Builder - budowanie obiektu zawierającego informacje o rodzaju pracy do wykonania
    
-   Metoda wytwórcza - użycie do serwisu boardingowy - np. Schody i Autobus bedą implementować interfejs Transport
-   
-   Mediator - kierownik naczelny
+   Singleton - bazy danych zdefiniowane jako @Component 
    
    Iterator - użycie do przechodzenia po liście WorkOrders w celu znalezienia prac spełniających kryteria 
           iteracji (po numerze lotu) 
