@@ -11,3 +11,22 @@ Poszczególne serwisy poprzez wysyłanie wiadomości finished, landed, finishedd
 
 Pilot (landed) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finisheddeparture) -> LuggageService (finisheddeparture) -> Pilot (finished) 
 -> PushbackService (finished) -> State (ready)
+
+
+Wzorce strukturalne: Fasada
+
+Wzorce behawioralne: Stan, Metoda Szablonowa, Iterator
+
+Wzorce kreacyjne: Builder, Singleton
+
+Metoda szablonowa - utworzenie abstract flight state zawierającego metody poszczególnych stanów. Konkretne stany nadpisują metodę która dotyczy ich stanu np. PilotState nadpisuje metodę landed(). Jeżeli metoda zostanie użyta w innym stanie pojawia się błąd.
+
+Stan - utworzenie stanu dla każdego etapu działania poszczególnych serwisów, utworzenie kolejności zdarzeń - jeżeli aiport service posiada konkretny stan nie możemy w nim wywołać działań dla innch stanów
+
+Fasada - stworzenie rekordu zawierającego wszystkie serwisy dla danego lotu, które przechowywane są w airport service
+
+Builder - budowanie obiektu zawierającego informacje o rodzaju pracy do wykonania
+
+Singleton - bazy danych zdefiniowane jako @Component
+
+Iterator - użycie do przechodzenia po liście WorkOrders w celu znalezienia prac spełniających kryteria iteracji (po numerze lotu)
