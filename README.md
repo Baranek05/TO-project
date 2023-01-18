@@ -9,4 +9,4 @@ StandManager ma możliwość wysłania wiadomości, czasu przeznaczonego na obs�
 
 Poszczególne serwisy poprzez wysyłanie wiadomości finished, engines off albo ready przekazują następnemu w kolejce serwisowi, że może zacząć pracę, w kolejności:
 
-Pilot (engines off) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finished) -> LuggageService (finished) -> Pilot (finished) -> PushbackService (finished) -> State
+Pilot (engines off) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finished) -> LuggageService (finished) -> Pilot (finished) -> PushbackService (finished) -> State (ready)
