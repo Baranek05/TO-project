@@ -9,7 +9,7 @@ StandManager ma możliwość wysłania wiadomości, czasu przeznaczonego na obs�
 
 Poszczególne serwisy poprzez wysyłanie wiadomości finished, landed, finisheddeparture albo ready przekazują następnemu w kolejce serwisowi, że może zacząć pracę, w kolejności:
 
-Pilot (landed) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finisheddeparture) -> LuggageService (finisheddeparture) -> Pilot (finished) 
+Pilot (landed) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) ->  CleaningService (finished) -> CateringService (finished) -> TankingService (finished) -> BoardingService (finisheddeparture) -> LuggageService (finisheddeparture) -> Pilot (finished) 
 -> PushbackService (finished) -> State (ready)
 
 
