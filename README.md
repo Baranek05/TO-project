@@ -3,10 +3,11 @@ Airport services management
 
 Projekt uruchamiany jest poprzez wysyłanie wiadomości poprzez endpointy zawarte w klasach z "Controller" w nazwie.
 
-GeneralManager ma możliwość wysłania wiadomości, czasu przeznaczonego na obsługę samolotu do wybranego przez siebie, dostępnego StandManagera.
+GeneralManager ma możliwość wysłania wiadomości i czasu przeznaczonego na obsługę samolotu do StandManagera.
 
 StandManager ma możliwość wysłania wiadomości, czasu przeznaczonego na obsługę samolotu do wybranego przez siebie, dostępnego serwisu. Ponadto wysłanie opcji "finished" rozpoczyna procedurę obsługi lotu.
 
-Poszczególne serwisy poprzez wysyłanie wiadomości finished, engines off albo ready przekazują następnemu w kolejce serwisowi, że może zacząć pracę, w kolejności:
+Poszczególne serwisy poprzez wysyłanie wiadomości finished, landed, finisheddeparture albo ready przekazują następnemu w kolejce serwisowi, że może zacząć pracę, w kolejności:
 
-Pilot (engines off) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finished) -> LuggageService (finished) -> Pilot (finished) -> PushbackService (finished) -> State (ready)
+Pilot (landed) -> GeneralManager (send) -> StandManager  (send) -> StandManager (finished) -> LuggageService (finished) -> BoardingService (finished) -> TankingService (finished) -> CleaningService (finished) -> CateringService (finished) -> BoardingService (finisheddeparture) -> LuggageService (finisheddeparture) -> Pilot (finished) 
+-> PushbackService (finished) -> State (ready)
