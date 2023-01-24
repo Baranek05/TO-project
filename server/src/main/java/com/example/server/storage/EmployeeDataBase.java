@@ -23,6 +23,8 @@ public class EmployeeDataBase {
         employeeList.add(new Employee("Ewa Kozlowska", ServiceType.LUGGAGE_SERVICE));
         employeeList.add(new Employee("Alicja Nowak", ServiceType.TANKING_SERVICE));
         employeeList.add(new Employee("Tomasz Nowak", ServiceType.TANKING_SERVICE));
+        employeeList.add(new Employee("Tomasz Kaczmarek", ServiceType.PUSHBACK_SERVICE));
+        employeeList.add(new Employee("Robert Madej", ServiceType.PUSHBACK_SERVICE));
     }
 
     public void save(Employee employee) {
