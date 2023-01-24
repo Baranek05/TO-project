@@ -1,7 +1,7 @@
-package com.example.server.storage;
+package com.example.application.server.storage;
 
-import com.example.server.model.ServiceType;
-import com.example.server.model.WorkOrder;
+import com.example.application.server.model.ServiceType;
+import com.example.application.server.model.WorkOrder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
