@@ -4,10 +4,123 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="support for departure">
+    <list default="true" id="89036113-e9f4-44b0-b0ed-fe5736f70221" name="Changes" comment="serwer - swerwisy są po kolei, niepotrzebne final state usunięte">
+      <change afterPath="$PROJECT_DIR$/application/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/infrastructure/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/PilotForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/ServicePicker.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/ServicePicker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/lib/WithUuid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/example/application/server/GeneralManagerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/example/application/server/PilotTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/example/application/server/StandManagerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/MainManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/MainManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/Pilot.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/Pilot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/PositionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/PositionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/model/Work.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/model/Work.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/service/WorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/service/WorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/storage/EmployeeDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/storage/EmployeeDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/storage/FlightDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/storage/FlightDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/storage/WorkDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/storage/WorkDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/boardingServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/BoardingServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/boardingServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/BoardingServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/cateringServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/CateringServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/cateringServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/CateringServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/cleaningServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/CleaningServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/cleaningServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/CleaningServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/followMeServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/FollowMeServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/followMeServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/FollowMeServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/generalManagerForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/GeneralManagerForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/generalManagerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/GeneralManagerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/luggageServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/LuggageServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/luggageServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/LuggageServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/pilotForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/PilotForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/pilotForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/pushbackServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/PushbackServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/pushbackServiceFormForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/PushbackServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/standManagerForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/StandManagerForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/standManagerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/StandManagerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/tankingServiceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/TankingServiceForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/view/tankingServiceFormForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/application/view/TankingServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/BoardingServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/BoardingServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/CateringServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/CateringServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/CleaningServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/CleaningServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/EmployeeServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/EmployeeServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/GeneralManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/GeneralManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/LuggageServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/LuggageServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/PilotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/PilotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/PushbackServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/PushbackServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/StandManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/StandManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/TankingServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/TankingServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/controller/WorkOrderServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/controller/WorkOrderServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/lib/WithUuid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageAssignTimeFromStandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageAssignTimeFromStandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageAssignTimeToService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageAssignTimeToService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageFromGeneralManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageFromGeneralManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageFromStandManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageFromStandManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageStartFromStandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageStartFromStandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageStartToService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageStartToService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageToGeneralManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageToGeneralManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageToService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageToService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/MessageToStandManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/MessageToStandManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/ServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/ServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/model/WorkOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/model/WorkOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/AirportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/AirportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/BoardingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CateringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/CateringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/CleaningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/CleaningService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/GeneralManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/GeneralManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/LuggageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/LuggageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/MessageQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/MessageQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/PilotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/PilotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/PushbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/PushbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/StandManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/StandManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/TankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/TankingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/WorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/WorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/AbstractFlightState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/AbstractFlightState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/BoardingArrivalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/BoardingArrivalState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/BoardingDepartureState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/BoardingDepartureState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/CateringState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/CateringState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/CleaningState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/CleaningState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/FlightState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/FlightState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/GeneralManagerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/GeneralManagerState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/LuggageArrivalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/LuggageArrivalState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/LuggageDepartureState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/LuggageDepartureState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/PilotToPushbackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/PilotToPushbackState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/PushbackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/PushbackState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/ReadyState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/ReadyState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/StandManagerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/StandManagerState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/service/state/TankingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/state/TankingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/EmployeeDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/storage/EmployeeDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/storage/WorkDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/application/server/storage/WorkDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/example/server/ServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/boardingServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/boardingServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cateringServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/cateringServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cleaningServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/cleaningServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/generalManagerForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/generalManagerForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/luggageServiceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/luggageServiceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/pilotForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/pilotForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/pushbackServiceFormForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/pushbackServiceFormForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/standManagerForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/standManagerForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/tankingServiceFormForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/view/tankingServiceFormForm.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +151,17 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="17" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2K0DdgAQDI6W5oeNL4sXBlSiCNQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -58,33 +179,145 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/pc/Downloads/TO-project",
+    "last_opened_file_path": "C:/Users/X1 Carbon/Desktop/TO/project/application/src/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "cf1e8c14e54505f60aa10ceb8d5d8ab3",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\X1 Carbon\Desktop\TO\project\application\src\test" />
       <recent name="C:\Users\X1 Carbon\Desktop\TO\project\server\src\main\java\com\example\server\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\X1 Carbon\Desktop\TO\project\application" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.server.controller" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server.ServerApplication" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.Main" />
+      <module name="project" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GeneralManagerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.application.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.application.server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.server.GeneralManagerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.application.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.application.server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.server.GetTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PilotTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.application.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.application.server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.server.PilotTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.application.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.application.server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.server.ServiceTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StandManagerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.application.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.application.server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.application.server.StandManagerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.application.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.GeneralManagerTests" />
+      <item itemvalue="JUnit.GetTests" />
+      <item itemvalue="JUnit.PilotTests" />
+      <item itemvalue="JUnit.ServiceTests" />
+      <item itemvalue="JUnit.StandManagerTests" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StandManagerTests" />
+        <item itemvalue="JUnit.ServiceTests" />
+        <item itemvalue="JUnit.GeneralManagerTests" />
+        <item itemvalue="JUnit.PilotTests" />
+        <item itemvalue="JUnit.GetTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +329,11 @@
       <updated>1673102701131</updated>
       <workItem from="1673102703943" duration="23212000" />
       <workItem from="1673885703498" duration="14284000" />
+      <workItem from="1674300000836" duration="68000" />
+      <workItem from="1674394345815" duration="2141000" />
+      <workItem from="1674397645780" duration="2333000" />
+      <workItem from="1674407516517" duration="7151000" />
+      <workItem from="1674420570360" duration="17852000" />
     </task>
     <task id="LOCAL-00001" summary="basic logic solution">
       <created>1673034939154</created>
@@ -169,21 +407,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/server/controller/PilotController.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/server/service/MessageQueue.java</url>
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/application/server/service/MessageQueue.java</url>
           <line>17</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/example/server/service/BoardingService.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((JPanel)((JButton)e.source).parent).parent" custom="javax.swing.JButton,javax.swing.JPanel" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
