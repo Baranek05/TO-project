@@ -59,6 +59,13 @@ public class ServicePicker {
             TankingServiceForm.open();
         });
     }
+    public static void open() {
+        frame = new JFrame("Service Picker");
+        frame.setContentPane(new ServicePicker().mainPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 
     public static void main(String[] args) {
         frame = new JFrame("Service Picker");

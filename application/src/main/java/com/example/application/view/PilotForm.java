@@ -1,6 +1,6 @@
 package com.example.application.view;
 
-import com.example.application.infrastructure.Client;
+import com.example.application.infrastructure.PilotClient;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,18 +17,30 @@ public class PilotForm extends JFrame{
     private JTextField informationTextField;
     private JButton enginesOffButton;
     private JButton readyButton;
+    private JButton closeButton;
+
+    private static JFrame frame;
 
     public PilotForm(){
-        readyButton.addActionListener(new ActionListener() {
+
+        enginesOffButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Client().post();
+                new PilotClient().post();
+            }
+        });
+
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                ServicePicker.open();
             }
         });
     }
 
     public static void open() {
-        JFrame frame = new JFrame("PilotForm");
+        frame = new JFrame("PilotForm");
         frame.setContentPane(new PilotForm().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

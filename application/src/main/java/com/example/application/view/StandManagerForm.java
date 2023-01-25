@@ -10,10 +10,6 @@ public class StandManagerForm {
     private JLabel standManagerLabel;
     private JLabel userLabel;
     private JTextField exactUserTextField;
-    private JLabel timeLeftLabel;
-    private JTextField timeLeftTextField;
-    private JLabel timeToDepartureLabel;
-    private JTextField timeToDepartureTextField;
     private JLabel informationLabel;
     private JTextField informationTextField;
     private JLabel sendMessageLabel;
