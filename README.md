@@ -13,13 +13,15 @@ Pilot (landed) -> GeneralManager (send) -> StandManager  (send) -> StandManager 
 -> PushbackService (finished) -> State (ready)
 
 
-Wzorce strukturalne: Fasada
+Wzorce strukturalne: Fasada, Most
 
 Wzorce behawioralne: Stan, Metoda Szablonowa, Iterator
 
 Wzorce kreacyjne: Builder, Singleton
 
 Metoda szablonowa - utworzenie abstract flight state zawierającego metody poszczególnych stanów. Konkretne stany nadpisują metodę która dotyczy ich stanu np. PilotState nadpisuje metodę landed(). Jeżeli metoda zostanie użyta w innym stanie pojawia się błąd.
+
+Most - połączenie między GUI a API
 
 Stan - utworzenie stanu dla każdego etapu działania poszczególnych serwisów, utworzenie kolejności zdarzeń - jeżeli aiport service posiada konkretny stan nie możemy w nim wywołać działań dla innch stanów
 
